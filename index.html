@@ -85,11 +85,13 @@
             <span><b>IFRS 9</b> · <b>IFRS 17</b> models</span><i></i>
             <span>Co-developer · <b>Robot Sok</b></span><i></i>
             <span>Master's research · <b>Explainable AI</b></span><i></i>
+            <span>Open source · <b>Khmer VITS TTS</b></span><i></i>
             <span>Founder · <b>A Bit About Digital</b></span><i></i>
             <span><b>Senior</b> Data Analytics</span><i></i>
             <span><b>IFRS 9</b> · <b>IFRS 17</b> models</span><i></i>
             <span>Co-developer · <b>Robot Sok</b></span><i></i>
             <span>Master's research · <b>Explainable AI</b></span><i></i>
+            <span>Open source · <b>Khmer VITS TTS</b></span><i></i>
             <span>Founder · <b>A Bit About Digital</b></span><i></i>
         </div>
     </div>
@@ -280,7 +282,7 @@
                         <li><b>AI / ML</b><span class="chips sm"><span>TensorFlow</span><span>PyTorch</span><span>OpenCV</span></span></li>
                         <li><b>Data engineering</b><span class="chips sm"><span>Apache Kafka</span><span>Apache NiFi</span><span>PostgreSQL</span><span>Azure Data Lake</span></span></li>
                         <li><b>Finance &amp; reporting</b><span class="chips sm"><span>IFRS 9</span><span>IFRS 17</span><span>Financial modeling</span></span></li>
-                        <li><b>Research</b><span class="chips sm"><span>Explainable AI (XAI)</span><span>Machine learning</span></span></li>
+                        <li><b>Research</b><span class="chips sm"><span>Explainable AI (XAI)</span><span>Machine learning</span><span>Khmer text-to-speech</span></span></li>
                         <li><b>Systems</b><span class="chips sm"><span>Linux</span><span>Ubuntu</span><span>Kali Linux</span></span></li>
                     </ul>
                 </div>
@@ -288,16 +290,82 @@
         </div>
     </section>
 
-    <!-- Portfolio (coming soon) -->
+    <!-- Portfolio -->
     <section id="portfolio" class="section dark">
         <svg class="circuit" data-seed="11" aria-hidden="true"></svg>
         <div class="container">
             <div class="head reveal">
                 <span class="label">06 · Portfolio</span>
-                <h2 class="display">Projects <span class="lime">coming soon</span></h2>
-                <p class="sub mono">Compiling · testing · shipping shortly</p>
+                <h2 class="display">Open-source <span class="lime">projects</span></h2>
+                <p class="sub mono">Research · code · models you can use</p>
             </div>
-            <div class="note reveal">Heads-up: projects are being prepared for release. Follow me on <a href="https://github.com/LykheangPeng" target="_blank" rel="noopener"><code>GitHub</code></a> to see them first.</div>
+
+            <article class="project reveal">
+                <header class="project-top">
+                    <span class="project-num display">01</span>
+                    <div>
+                        <p class="eyebrow">Khmer AI · Text-to-speech</p>
+                        <h3 class="display">Khmer <span class="lime">VITS</span> TTS</h3>
+                        <p class="km project-km">ប្រព័ន្ធបំប្លែងអត្ថបទខ្មែរទៅជាសំឡេង</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/LykheangPeng/Khmer_VITs_TTS" target="_blank" rel="noopener" class="btn btn-lime"><i class="ti-github"></i> Code</a>
+                        <a href="https://huggingface.co/Lykheang/khmer_vits_tts_v1" target="_blank" rel="noopener" class="btn btn-outline">🤗 Model</a>
+                    </div>
+                </header>
+
+                <div class="project-body">
+                    <div class="project-text">
+                        <p class="project-lead">An end-to-end Khmer text-to-speech model I trained from scratch with VITS. One model speaks in 10 voices and reads Khmer script directly, with no phonemizer needed.</p>
+                        <p>Trained on the open <strong>Khmer ASR Cultural Dataset</strong> by Digital Divide Data. Numbers are expanded into Khmer words automatically. Built for education and research, to help young Khmer AI developers.</p>
+                        <ul class="bullets project-points">
+                            <li><b>Use it in a minute</b><span>Download the pretrained model from Hugging Face. Runs on a normal CPU, including free Google Colab.</span></li>
+                            <li><b>Train your own</b><span>A <code>khmer-vits</code> command line handles download, data preparation, training and synthesis.</span></li>
+                        </ul>
+                        <div class="chips sm"><span>Python</span><span>PyTorch</span><span>VITS</span><span>HiFi-GAN</span><span>Khmer NLP</span><span>MIT licence</span></div>
+                    </div>
+
+                    <div class="project-listen">
+                        <p class="eyebrow">Listen · <span class="km">ស្តាប់</span></p>
+                        <p class="listen-text km">“ប្រទេសកម្ពុជាមានប្រជាជនជាង ១៦ លាននាក់”</p>
+                        <p class="listen-tr">“Cambodia has a population of more than 16 million people.”</p>
+                        <div class="voices">
+                            <button class="voice" type="button" data-src="assets/audio/khmer-tts-f-adt2-0002.wav" aria-label="Play Female voice A">
+                                <span class="voice-btn"><i class="ti-control-play"></i></span>
+                                <span class="voice-info"><b>Female voice A</b><small class="mono">f-adt2-0002 · 8.5 h data</small></span>
+                                <span class="voice-bar"><span></span></span>
+                            </button>
+                            <button class="voice" type="button" data-src="assets/audio/khmer-tts-f-adt1-0002.wav" aria-label="Play Female voice B">
+                                <span class="voice-btn"><i class="ti-control-play"></i></span>
+                                <span class="voice-info"><b>Female voice B</b><small class="mono">f-adt1-0002 · 8.3 h data</small></span>
+                                <span class="voice-bar"><span></span></span>
+                            </button>
+                            <button class="voice" type="button" data-src="assets/audio/khmer-tts-m-adt2-0002.wav" aria-label="Play Male voice A">
+                                <span class="voice-btn"><i class="ti-control-play"></i></span>
+                                <span class="voice-info"><b>Male voice A</b><small class="mono">m-adt2-0002 · 9.6 h data</small></span>
+                                <span class="voice-bar"><span></span></span>
+                            </button>
+                            <button class="voice" type="button" data-src="assets/audio/khmer-tts-m-adt1-0002.wav" aria-label="Play Male voice B">
+                                <span class="voice-btn"><i class="ti-control-play"></i></span>
+                                <span class="voice-info"><b>Male voice B</b><small class="mono">m-adt1-0002 · 7.0 h data</small></span>
+                                <span class="voice-bar"><span></span></span>
+                            </button>
+                        </div>
+                        <p class="listen-note mono">Synthetic speech · raw model output</p>
+                    </div>
+                </div>
+
+                <div class="project-stats">
+                    <div><span class="display">10</span><span class="mono">Voices</span></div>
+                    <div><span class="display">36.6 h</span><span class="mono">Khmer speech</span></div>
+                    <div><span class="display">11 h</span><span class="mono">Training · 1× A100</span></div>
+                    <div><span class="display">39.7M</span><span class="mono">Parameters</span></div>
+                    <div><span class="display">22 kHz</span><span class="mono">Audio output</span></div>
+                </div>
+                <p class="project-credit mono">Audio samples and model weights: CC-BY-SA-4.0, derived from the Khmer ASR Cultural Dataset by Digital Divide Data.</p>
+            </article>
+
+            <div class="note reveal">More projects are on the way. Follow me on <a href="https://github.com/LykheangPeng" target="_blank" rel="noopener"><code>GitHub</code></a> to see them first.</div>
         </div>
     </section>
 

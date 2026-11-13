@@ -103,6 +103,31 @@
         clearTimeout(rt); rt = setTimeout(buildAll, 200);
     });
 
+    /* ---------- voice sample players ---------- */
+    var player = new Audio(), current = null;
+    function resetVoice(btn) {
+        if (!btn) return;
+        btn.classList.remove("playing");
+        btn.querySelector("i").className = "ti-control-play";
+        btn.querySelector(".voice-bar span").style.width = "0";
+    }
+    document.querySelectorAll(".voice").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            if (current === btn && !player.paused) { player.pause(); resetVoice(btn); current = null; return; }
+            resetVoice(current);
+            current = btn;
+            player.src = btn.getAttribute("data-src");
+            player.currentTime = 0;
+            player.play().catch(function () {});
+            btn.classList.add("playing");
+            btn.querySelector("i").className = "ti-control-pause";
+        });
+    });
+    player.addEventListener("timeupdate", function () {
+        if (current && player.duration) current.querySelector(".voice-bar span").style.width = (player.currentTime / player.duration * 100) + "%";
+    });
+    player.addEventListener("ended", function () { resetVoice(current); current = null; });
+
     /* ---------- reveal + skill bars ---------- */
     function fillSkills(scope) {
         scope.querySelectorAll(".skill").forEach(function (s) {
